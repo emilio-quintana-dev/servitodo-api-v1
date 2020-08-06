@@ -1,3 +1,5 @@
+require 'faker'
+
 # Cleanup
 Category.destroy_all
 Professional.destroy_all
@@ -10,6 +12,11 @@ Category.create(name: "House Cleaning")
 
 # Professional signs up!
 Professional.create(first_name: 'Romulo', last_name: 'Torres', introduction: "I'm a handyman with 10 years of experience.", category_id: Category.last.id, zip_code: '60608')
+Professional.create(first_name: 'Dieter', last_name: 'Mino', introduction: "I'm a handyman with 10 years of experience.", category_id: Category.last.id, zip_code: '60607')
+Professional.create(first_name: 'Juan', last_name: 'Unda', introduction: "I'm a handyman with 10 years of experience.", category_id: Category.last.id, zip_code: '60606')
+Professional.create(first_name: 'Emilio', last_name: 'Quintana', introduction: "I'm a paintor with 10 years of experience.", category_id: Category.last.id, zip_code: '60608')
+Professional.create(first_name: 'Sole', last_name: 'Sanchez', introduction: "I'm a electricity with 10 years of experience.", category_id: Category.last.id, zip_code: '60608')
+Professional.create(first_name: 'Bonnie', last_name: 'Lopez', introduction: "I'm a coder with 10 years of experience.", category_id: Category.last.id, zip_code: '60608')
 
 # First user creates an account!
 User.create(first_name: 'Emilio', last_name: 'Quintana', email: 'emilio@dev.com', password: 'emilio', password_confirmation: 'emilio', zip_code: '60608')
