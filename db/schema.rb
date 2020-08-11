@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2020_08_04_192152) do
 
   create_table "jobs", force: :cascade do |t|
     t.string "title"
-    t.integer "category_id"
     t.integer "user_id"
     t.integer "professional_id"
     t.string "status", default: "PENDING"
@@ -34,11 +33,14 @@ ActiveRecord::Schema.define(version: 2020_08_04_192152) do
   create_table "professionals", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "email"
     t.integer "times_hired", default: 0
     t.integer "time_in_bussiness", default: 0
     t.string "introduction"
     t.integer "category_id"
-    t.string "zip_code"
+    t.integer "zip_code"
+    t.integer "average_reviews", default: 0
+    t.integer "estimated_cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -58,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_192152) do
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
-    t.string "zip_code"
+    t.integer "zip_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
