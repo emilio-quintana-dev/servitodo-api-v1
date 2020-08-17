@@ -44,3 +44,6 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'jwt', '~> 2.2', '>= 2.2.1'
 gem 'faker', '~> 2.13'
 gem 'active_model_serializers', '~> 0.10.10'
+gem 'stripe'
+gem 'sinatra', '~> 2.0', '>= 2.0.8.1'
+

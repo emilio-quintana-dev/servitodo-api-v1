@@ -14,8 +14,7 @@ class AuthController < ApplicationController
 
     def new
         user = User.create(
-            first_name: params[:first_name],
-            last_name: params[:last_name],
+            name: params[:name],
             email: params[:email],
             zip_code: params[:zip_code].to_i,
             password: params[:password],
@@ -29,7 +28,7 @@ class AuthController < ApplicationController
             render json: { id: user.id, email: user.email, zip_code: user.zip_code, token: token }
         else
             render json: {
-                error: "Error while creating user, please try again."
+                error: "Internal Error, please try again."
             }
         end
     end

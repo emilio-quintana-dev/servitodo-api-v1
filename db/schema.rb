@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 2020_08_04_192152) do
   end
 
   create_table "professionals", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name"
     t.string "email"
+    t.string "img_url"
     t.integer "times_hired", default: 0
     t.integer "time_in_bussiness", default: 0
     t.string "introduction"
@@ -56,8 +56,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_192152) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name"
     t.string "email"
     t.string "password_digest"
     t.integer "zip_code"

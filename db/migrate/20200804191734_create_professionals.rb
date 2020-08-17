@@ -1,9 +1,9 @@
 class CreateProfessionals < ActiveRecord::Migration[6.0]
   def change
     create_table :professionals do |t|
-      t.string :first_name
-      t.string :last_name
+      t.string :name
       t.string :email
+      t.string :img_url
       t.integer :times_hired ,:default => 0
       t.integer :time_in_bussiness ,:default => 0
       t.string :introduction
