@@ -35,10 +35,8 @@ class JobsController < ApplicationController
         job = Job.find(params[:id])
         job.update(status: "Complete")
         job.save
-        render json: {
-            status: "SUCCESS",
-            job: job
-        }
+        render json: job
+        
     end
 
     def destroy

@@ -4,7 +4,7 @@ class CreateJobs < ActiveRecord::Migration[6.0]
       t.string :title
       t.integer :user_id
       t.integer :professional_id
-      t.string :status ,:default => "PENDING"
+      t.string :status ,:default => "Pending"
 
       t.timestamps
     end

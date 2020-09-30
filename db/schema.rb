@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_192152) do
     t.string "title"
     t.integer "user_id"
     t.integer "professional_id"
-    t.string "status", default: "PENDING"
+    t.string "status", default: "Pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_192152) do
     t.string "email"
     t.string "password_digest"
     t.integer "zip_code"
+    t.string "img_url", default: "https://robohash.org/rerumetmagnam.png?size=300x300&set=set1"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

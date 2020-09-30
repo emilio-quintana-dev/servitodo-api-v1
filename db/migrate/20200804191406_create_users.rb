@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :password_digest
       t.integer :zip_code
+      t.string :img_url, :default => "https://robohash.org/rerumetmagnam.png?size=300x300&set=set1"
 
       t.timestamps
     end

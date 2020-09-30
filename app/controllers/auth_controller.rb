@@ -6,7 +6,7 @@ class AuthController < ApplicationController
             payload = { user_id: user.id }
             secret = 'secret'
             token = JWT.encode(payload, secret, 'HS256')
-            render json: { id: user.id, email: user.email, zip_code: user.zip_code, token: token }
+            render json: { id: user.id, email: user.email, img_url: user.img_url,  zip_code: user.zip_code, token: token }
         else
             render json: { error: "Invalid Username or password" }
         end
@@ -25,7 +25,7 @@ class AuthController < ApplicationController
             payload = { user_id: user.id }
             secret = 'secret'
             token = JWT.encode(payload, secret, 'HS256')
-            render json: { id: user.id, email: user.email, zip_code: user.zip_code, token: token }
+            render json: { id: user.id, email: user.email, img_url: user.img_url,  zip_code: user.zip_code, token: token }
         else
             render json: {
                 error: "Internal Error, please try again."
@@ -40,7 +40,7 @@ class AuthController < ApplicationController
 
         user = User.find(id)
         if(user)
-            render json: { id: user.id, email: user.email, zip_code: user.zip_code }
+            render json: { id: user.id, email: user.email, img_url: user.img_url,  zip_code: user.zip_code }
         else
             render json: { error: 'Invalid Token'}
         end
