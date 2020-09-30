@@ -1,24 +1,14 @@
-# README
+I created this project to serve as the back-end for my servitodo v1 app. Feel free to checkout the front-end [here](https://github.com/emilio-quintana-dev/servtido-client-v1).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Db Diagram
+![Db diagram](https://github.com/emilio-quintana-dev/sevitodo-api-v1/blob/master/public/images/st-db-schema.png)
 
-Things you may want to cover:
+# Features
+- Implemented end-points for users, jobs, reviews and professionals.
 
-* Ruby version
+# Tech Stack
+- Ruby on Rails and PostgreSQL db.
 
-* System dependencies
+# Libraries/packages used:
+- Bcrypt, Active Model Serializer and Stripe elements.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
